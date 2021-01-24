@@ -3,9 +3,9 @@
 
 #include "Arduino.h"
 
-class Joystick {
+class JoystickMatto {
     public:     
-                Joystick(int, int, int);
+                JoystickMatto(int, int, int);
                 void calibra();
                 int getX();
                 int getY();
