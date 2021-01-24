@@ -9,8 +9,8 @@ class Joystick {
                 void calibra();
                 int getX();
                 int getY();
-                int getXStd();
-                int getYStd();
+                double getXStd();
+                double getYStd();
     private:    
                 int pinX;
                 int pinY;
