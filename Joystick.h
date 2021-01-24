@@ -14,7 +14,6 @@ class Joystick {
     private:    
                 int pinX;
                 int pinY;
-                int pinZ;
                 int dX;
                 int dY;
 };
