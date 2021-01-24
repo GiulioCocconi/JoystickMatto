@@ -17,7 +17,7 @@ int Joystick::getX() {
  }
  
 double Joystick::getXStd() {
-  return (analogRead(this->pinX) + dX)/dX
+  return (double)(analogRead(this->pinX) + dX)/dX
 }
 
 int Joystick::getY() {
@@ -25,5 +25,5 @@ int Joystick::getY() {
  }
  
  double Joystick::getYStd() {
-  return (analogRead(this->pinY) + dY)/dY
+  return (double)(analogRead(this->pinY) + dY)/dY
 }
