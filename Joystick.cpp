@@ -1,4 +1,4 @@
-#include "Joystick.h"
+#include "JoystickMatto.h"
 
 Joystick::Joystick(int pinX, int pinY) {
   this->pinX = pinX;
