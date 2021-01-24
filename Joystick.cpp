@@ -3,7 +3,6 @@
 Joystick::Joystick(int pinX, int pinY) {
   this->pinX = pinX;
   this->pinY = pinY;
-  this.calibra();
 }
 
 void Joystick::calibra() {
