@@ -5,7 +5,7 @@
 
 class JoystickMatto {
     public:     
-                JoystickMatto(int, int, int);
+                JoystickMatto(int, int);
                 void calibra();
                 int getX();
                 int getY();
