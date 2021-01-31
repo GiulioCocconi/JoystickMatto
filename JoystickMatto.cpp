@@ -18,7 +18,7 @@ int JoystickMatto::getX() {
  }
  
 double JoystickMatto::getXStd() {
-  return (double)(analogRead(this->pinX) + dX)/-dX
+  return (double)(analogRead(this->pinX) + dX)/-dX;
 }
 
 int JoystickMatto::getY() {
@@ -26,5 +26,5 @@ int JoystickMatto::getY() {
  }
  
  double JoystickMatto::getYStd() {
-  return (double)(analogRead(this->pinY) + dY)/-dY
+  return (double)(analogRead(this->pinY) + dY)/-dY;
 }
