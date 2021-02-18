@@ -11,6 +11,7 @@ class JoystickMatto {
                 int getY();
                 double getXStd();
                 double getYStd();
+                double getAngle();
     private:    
                 int pinX;
                 int pinY;
