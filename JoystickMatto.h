@@ -11,7 +11,7 @@ class JoystickMatto {
                 int getY(); //Restituisce il valore raw di Y
                 double getXStd(); //Restituisce il valore di X tenendo conto di dX
                 double getYStd(); //Restituisce il valore di Y tenendo conto di dY
-                double getAngle(); //Mediante arcos determina l'angolo tra l'asse x e il punto P di cordinate (X,Y) [Richiede dX e dY]
+                double getAngle(); //Mediante arcos determina l'angolo in radianti tra l'asse x e il punto P di cordinate (X,Y) [Richiede dX e dY]
     private:    
                 int pinX;
                 int pinY;
