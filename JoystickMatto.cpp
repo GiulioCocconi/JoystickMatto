@@ -33,5 +33,9 @@ double JoystickMatto::getAngle() {
   double x = this->getXStd();
   double y = this->getYStd();
   double ipo = (double)sqrt(x*x+y*y);
-  return (double)acos(x/ipo);
+  double algo = (double)acos(x/ipo);
+  if (y>=0) {
+    return algo;
+  }
+  return (2*PI) - algo;
 }
