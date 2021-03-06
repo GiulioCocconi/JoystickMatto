@@ -9,8 +9,8 @@ JoystickMatto::JoystickMatto(int pinX, int pinY) {
 
 void JoystickMatto::calibra() {
   delay(1000);
-  this->dX = -1 * analogRead(this->pinX);
-  this->dY = -1 * analogRead(this->pinY);
+  this->dX = analogRead(this->pinX);
+  this->dY = analogRead(this->pinY);
  }
  
 int JoystickMatto::getX() {
@@ -22,7 +22,7 @@ double JoystickMatto::getXStd() {
     //this->calibra();
     return this->getX();
   }
-  return (double)(analogRead(this->pinX) + dX)/-dX;
+  return (double)(analogRead(this->pinX) - dX)/dX;
 }
 
 int JoystickMatto::getY() {
@@ -34,7 +34,7 @@ int JoystickMatto::getY() {
     //this->calibra();
     return this->getY();
   }
-  return (double)(analogRead(this->pinY) + dY)/-dY;
+  return (double)(analogRead(this->pinY) - dY)/dY;
 }
 
 double JoystickMatto::getAngle() {
