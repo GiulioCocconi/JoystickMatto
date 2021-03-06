@@ -18,7 +18,7 @@ int JoystickMatto::getX() {
  }
  
 double JoystickMatto::getXStd() {
-  if (dX == 0) {
+  if (this->dX == 0) {
     //this->calibra();
     return this->getX();
   }
@@ -30,7 +30,7 @@ int JoystickMatto::getY() {
  }
  
  double JoystickMatto::getYStd() {
-  if (dY == 0) {
+  if (this->dY == 0) {
     //this->calibra();
     return this->getY();
   }
