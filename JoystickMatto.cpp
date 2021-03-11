@@ -16,16 +16,18 @@ void JoystickMatto::calibra() {
 int JoystickMatto::getX() {
   return analogRead(this->pinX);
  }
-
  
 double JoystickMatto::getXStd() {
   if (this->dX == 0) {
     //this->calibra();
     return this->getX();
   }
-  double algo = (this->getX() - dX)/dX;
-  if (algo != 0) {
-    return algo * -1;
+  double algo = (double) -1 * (analogRead(this->pinX) - dX)/dX;
+  if (algo > 1.0) {
+    return 1.0;
+  }
+  if (algo < -1.0) {
+    return -1.0;
   }
   return algo;
 }
@@ -39,17 +41,26 @@ int JoystickMatto::getY() {
     //this->calibra();
     return this->getY();
   }
-  return (double)(this->getY() - dY)/dY;
+  double algo = (double)(analogRead(this->pinY) - dY)/dY;
+   if (algo > 1.00) {
+     return 1.0;
+   }
+   if (algo < -1.00) {
+     return -1.0;
+   }
+   return algo;
 }
 
 double JoystickMatto::getAngle() {
   double x = this->getXStd();
   double y = this->getYStd();
   double ipo = (double)sqrt(x*x+y*y);
-  double algo = (double)acos(x/ipo);
-  if (x == 0 && y == 0) {
+  
+  if (ipo == 0) {
     return 0;
   }
+  
+  double algo = (double)acos(x/ipo);
   if (y>=0) {
     return algo;
   }
