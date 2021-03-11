@@ -23,7 +23,11 @@ double JoystickMatto::getXStd() {
     //this->calibra();
     return this->getX();
   }
-  return (double) -1 * (this->getX() - dX)/dX;
+  double algo = (this->getX() - dX)/dX;
+  if (algo != 0) {
+    return algo * -1;
+  }
+  return algo;
 }
 
 int JoystickMatto::getY() {
