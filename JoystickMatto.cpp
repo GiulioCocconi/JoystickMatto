@@ -13,9 +13,13 @@ void JoystickMatto::calibra() {
   this->dY = analogRead(this->pinY);
  }
  
-int JoystickMatto::getX() {
+int JoystickMatto::getXRaw() {
   return analogRead(this->pinX);
  }
+
+int JoystickMatto::getX() {
+  return -1 * this->getXRaw();
+}
  
 double JoystickMatto::getXStd() {
   if (this->dX == 0) {
