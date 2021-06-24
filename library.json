@@ -1,0 +1,13 @@
+{
+  "name": "JoystickMatto",
+  "version": "Gestione Joystick",
+  "description": "Gestione Joystick",
+  "keywords": "",
+  "repository":
+  {
+    "type": "git",
+    "url": "Gestione Joystick"
+  },
+  "frameworks": ["arduino"],
+  "platforms": "*"
+}
